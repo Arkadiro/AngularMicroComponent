@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +9,24 @@ export class AppComponent implements OnInit {
   title = 'app-video';
   show:boolean = false;
   url:string;
+  whiteX = false;
 
-  constructor(private sanitizer :DomSanitizer){}
+  constructor(){}
   
   ngOnInit(){
-    this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/cl2Mx4B_Eks?modestbranding=1&amp;rel=0&amp;controls=1&amp;showinfo=0&amp;html5=1&amp;autoplay=1&amp;iv_load_policy=3')
+  }
+
+  clicked(){
+    console.log('click')
+  }
+
+  getColor(){
+    if(this.whiteX){
+      return 'white'
+    }
+  }
+
+  showLog(){
+    console.log('green Button')
   }
 }

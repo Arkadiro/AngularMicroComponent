@@ -6,8 +6,25 @@
 </section>
 <div *ngIf="show" class="dark-overlay">
   <div class="modal">
-      <div (click)="show = false" class="modal-close">X</div>
-      <div class="clear"></div>
-    <iframe src="https://www.youtube.com/embed/cl2Mx4B_Eks?modestbranding=1&amp;rel=0&amp;controls=1&amp;showinfo=0&amp;html5=1&amp;autoplay=1&amp;iv_load_policy=3" frameborder="0" height="450" width="100%" allowfullscreen></iframe>
+    <div (click)="show = false" class="modal-close">X</div>
+    <div class="clear"></div>
+    <iframe src="https://www.youtube.com/embed/cl2Mx4B_Eks?modestbranding=1&amp;rel=0&amp;controls=1&amp;showinfo=0&amp;html5=1&amp;autoplay=1&amp;iv_load_policy=3"
+      frameborder="0" height="450" width="100%" allowfullscreen></iframe>
   </div>
 </div>
+<!-- <app-button 
+  (onClick)="clicked()" 
+  [text]="'button'"
+  [style]="{'color':'red'}"><app-button> -->
+
+<app-button 
+  (onClick)="clicked()" 
+  [text]="'button'" 
+  [style]="{'color': getColor()}"
+  >
+  </app-button>
+<app-button-success
+  (onClick)="showLog()"
+  [style]="{'background-color':'green','color':'white'}"
+  [text]="'click me'">
+</app-button-success>
